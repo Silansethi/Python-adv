@@ -1,0 +1,42 @@
+
+Generator:-
+--------
+
+Generator is a function which is responsible to generate a sequence of values.
+We can write generator function like odinary function, But it use yield word to return the values.
+
+It's return the value one by one so here we can use next() function
+
+def calculator(a,b):
+    sum = a+b
+    sub = a-b
+    mul = a*b
+    div = (a/b)
+    yield sum
+    yield sub
+    yield mul
+    yield div
+
+s = calculator(10,20)
+
+print(next(s))
+print(next(s))
+print(next(s))
+print(next(s))
+
+def sequence():
+    for i in range(7,10):
+        pow = i**2
+        yield pow
+
+var = sequence()
+
+---Running Notes
+
+def cal(a,b):
+    add = a+b
+    return add
+first_obj = next(var)
+sec_obj = next(var)
+
+print(cal(first_obj,sec_obj))

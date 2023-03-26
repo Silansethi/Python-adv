@@ -1,0 +1,122 @@
+Nested Function:-
+
+When a function inside a function it's called nested function, Here always the ineer function depends upon outer function.
+
+
+# def sure_name(name,surename):
+#     if name == 'Keshab' and surename =='Sahu' :
+#         def son_name():
+#             complete_name = 'Madhaba'+surename
+#             print(complete_name)
+#         son_name()
+#
+# sure_name('Ragav','Sahu')
+
+
+def employee(Name,address,salary):
+    if salary > 90000:
+        def increment(salary):
+            salary = salary+10000
+            print(salary)
+        increment(salary)
+    else:
+        print('wait for next year')
+employee('Silan','Next gen Pg',9000)
+
+
+
+
+
+Function Decorator:-
+------------------
+
+Decorater is a function which can take a function as argument and extend its functionality and return modified function with extend functionality.
+
+
+
+  input function               new(add some functionality)
+-----------------> Decorate -------------------------------->
+    wish()                     decore/ineer() 
+
+
+The main advtange of decorator is we can extend the functionality of exitsing function without modify that function
+
+
+def moudification_cal(cal):
+    def inner(a,b):
+        mul = a*b
+        div = a/b
+        cal(a, b)
+        print('decore ka mul:-',mul,'decore ka div:-',div)
+    return inner
+
+@moudification_cal
+def cal(a,b):
+    sum = a+b
+    sub = a-b
+    print('main func ka sum:-',sum,'main func ka sub:-',sub)
+
+cal(10,20)
+
+op:- 
+main func ka sum:- 30 main func ka sub:- -10
+decore ka mul:- 200 decore ka div:- 0.5
+
+def decor(wish):
+    def inner(name):
+        if name == "Amiya":
+            print("Please donot come here")
+        else:
+            wish(name)
+    return inner
+
+@decor
+def wish(name):
+    print("Hello",name,"Good morning")
+
+wish('Prasana')
+wish('Amiya')
+
+
+Homework:-
+
+1.Try decorator from your side.
+2.Try decorator chaining once.
+
+
+Decorator Chaining:-
+------------------ 
+
+We can define multiple decorater for the some function and all the decorator with from decorator chaining.
+
+
+def sub(add):
+    def inner(a,b):
+        sub = a-b
+        print(sub)
+        add(a,b)
+    return inner
+
+def mul(add):
+    def inner(a,b):
+        mul = a*b
+        print(mul)
+        add(a,b)
+    return inner
+
+
+def div(add):
+    def inner(a,b):
+        mul = a/b
+        print(mul)
+        add(a,b)
+    return inner
+@sub
+@mul
+@div
+def add(a,b):
+    sum = a+b
+    print(sum)
+
+add(10,20)
+

@@ -1,0 +1,145 @@
+             File Handeling
+                        -------------==
+
+As the part of programmingrequirement,we have to store our data permannently for future purpose.For this requirement we should go for files.
+
+
+Files are very common permanent storage areas to store our data.
+
+Types of Files:-
+--------------
+
+There are 2 types of files are accept in python.
+
+1.Text Fles:
+------------
+
+Usually we can use text file to store character data
+ex:- abc.txt
+
+2.Binary Files.
+--------------
+
+usually we can use binary files to store binary data like images,video files,audio files etc.
+ex:-abc.png
+
+Opening a file:-
+--------------
+
+Before performing any operation(like read or write) on the fiel.First we have to open that file.For this we should use Python's inbuilt function:- open()
+
+But at the time of open,we have to specify mode,which represents the purpose of opening file.
+
+
+syntax:-
+
+variable = open("file_path","mode")
+
+mode:-
+----
+
+read(r):-
+--------
+Open an existing file for read opeartion,The file pointer is positioned at the beginning of the file.If the specified file does not exits then we will get FileNotFoundError.This is default mode.
+
+file_open = open("D:\\SCODEEN\\testing_19_python\\class_1_introduction.txt","r")
+
+write(w):-
+--------
+Open an existing file for write opeartion.If the file already contain some data then it will be overridden.If the specified file is not alraedy available then this mode will create that file.
+
+file_open = open("D:\\SCODEEN\\testing_19_python\\class_1_introduction.txt","w")
+
+
+append(a):-
+---------
+Open an exitsting file for append opeartion.It won't override existing data.If the specified file is not already available then this mode will create a new file.
+
+file_open = open("D:\\SCODEEN\\testing_19_python\\class_1_introduction.txt","a")
+
+Note:- All the above modes are applicable for text files only.If the above modes suffixed with 'b' then these represents for binary files.
+
+ex:- file_open = open("D:\\SCODEEN\\testing_19_python\\class_1_introduction.txt","wb")
+
+ex:- rb,wb,ab
+
+
+Closing a File:-
+--------------
+After completing our operation on the filr.It is highly recommended to close the file.For this we have to use close() function.
+
+variable.close()
+
+ex-:
+
+file_open = open("D:\\SCODEEN\\testing_19_python\\class_1_introduction.txt","r")
+file_open.close()
+
+
+Read:-
+----
+Reading Characters Data from the text
+1.read():- To read total data from the file.
+
+ex:-
+
+f = open("D:\\SCODEEN\\testing_17_18_python\\class_1_introduction.txt","r")
+data = f.read()
+print(data)
+f.close()
+
+2.read(n):- To read 'n' Characters from the file.
+
+f = open("D:\\SCODEEN\\testing_17_18_python\\class_1_introduction.txt","r")
+data = f.read(1000)
+print(data)
+f.close()
+
+3.readline():-To read only one line.
+
+f = open("D:\\SCODEEN\\testing_17_18_python\\class_1_introduction.txt","r")
+data = f.readline()
+print(data)
+f.close()
+
+4.readlines():-To read all lines into a list.
+
+f = open("D:\\SCODEEN\\testing_17_18_python\\class_1_introduction.txt","r")
+data = f.readlines()
+for line in data:
+    print(line,end="")
+f.close()
+
+
+
+-----------Running Notes------------------
+
+files are two types
+
+1.text file(text,csv,excel,docs)
+2.binary(video,audio,images)
+
+CRUD:- Create,,Read,Update,Delete
+
+1.How to open a file in python
+2.How to handel a file in python.
+3.How to manipulate a file a in python.
+
+
+read - r
+1.it can not be change anything, we can only read and see the data.
+2. r mode have 4 methods (read,readline,readlines,read(n)
+3.when we can open a file, if file path is wrong then r mode shows FileNotFoundError
+
+> read() :- it can be read all the data from the file.
+> readline:- it cane be read a single line in a single time.
+> read(n) :- count the char and return
+> readlines():- a single a line in string and return list of string.
+
+
+
+
+
+
+
+

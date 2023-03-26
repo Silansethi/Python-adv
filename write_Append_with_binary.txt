@@ -1,0 +1,43 @@
+#write
+
+# var = open('D:\\Treenetra\\Treenetra_class_notes\\Treenetra_AT-3\\class_39_generators.txt','w')
+# #write, writelines
+# li = ['sourav\n','chinamy\n','kumar\n']
+# # var.write('hye, Gourav everything is fine')
+#
+# var.writelines(data)
+# var.close()
+
+# var = open('D:\\Treenetra\\Treenetra_class_notes\\Treenetra_AT-3\\ritu_raj_file.txt','w')
+# var.write('I have a yamah bike')
+# var.close()
+
+#----- append
+# var = open('D:\\Treenetra\\Treenetra_class_notes\\Treenetra_AT-3\\ritu_raj_file.txt','a')
+# var.write('\nhe will plan for buy a new car')
+# print(var.name)
+# print(var.mode)
+# print(var.readable())
+# print(var.writable())
+# var.close()
+# print(var.closed)
+
+#--- binary:-
+'rb','wb','ab'
+
+# var = open('C:\\Users\\chand\\OneDrive\\Pictures\\class_testing.PNG','rb')
+# data = var
+# by = data.read()
+#
+# var2 = open('C:\\Users\\chand\\OneDrive\\Pictures\\drugs_1 (2).jpg','wb')
+# var2.write(by)
+# var2.close()
+
+
+# with open('C:\\Users\\chand\\OneDrive\\Pictures\\class_testing.PNG','rb') as file:
+#     data = file
+#     print(data.read())
+#     print(file.closed)
+# print(file.closed)
+
+#_________
